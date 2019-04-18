@@ -45,5 +45,13 @@ public class Program {
         sellerDao.update(newSeller);
         sellers = sellerDao.findAll();
         sellers.forEach(System.out::println);
+
+        System.out.println("----------------------------------");
+
+        System.out.println("=== TEST 6: seller delete ===");
+        System.out.println("Deleting...");
+        sellerDao.deleteById(6);
+        sellers = sellerDao.findAll();
+        sellers.forEach(System.out::println);
     }
 }
